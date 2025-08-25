@@ -1,0 +1,274 @@
+.results-display {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.results-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+}
+
+.results-header h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.results-content {
+  padding: 2rem;
+}
+
+.summary-section h3,
+.regulation-section h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.summary-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.summary-card h4 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.summary-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.summary-details div {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.sites-table,
+.regulation-table {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.sites-table table,
+.regulation-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sites-table th,
+.regulation-table th {
+  background: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.sites-table td,
+.regulation-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e9ecef;
+  color: #555;
+}
+
+.sites-table tr:hover,
+.regulation-table tr:hover {
+  background: #f8f9fa;
+}
+
+.total-cost {
+  font-weight: bold;
+  color: #667eea;
+}
+
+.imbalance {
+  font-weight: 500;
+  color: #dc3545;
+}
+
+.cost {
+  font-weight: 500;
+  color: #28a745;
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+  font-style: italic;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.export-section {
+  padding: 1.5rem 2rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  text-align: right;
+}
+
+.export-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.export-btn:hover {
+  background: #218838;
+}
+
+/* Price conversion styling */
+.price-note {
+  background: #e3f2fd;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #2196f3;
+  margin-bottom: 1rem;
+  color: #1565c0;
+}
+
+.price-conversion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.ore-price {
+  color: #666;
+  font-weight: 500;
+}
+
+.sek-price {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsive adjustments for price conversion */
+@media (max-width: 768px) {
+  .price-conversion {
+    font-size: 0.8rem;
+  }
+
+  .regulation-table th small {
+    display: block;
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .results-content {
+    padding: 1rem;
+  }
+
+  .results-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab {
+    padding: 0.5rem 1rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sites-table,
+  .regulation-table {
+    font-size: 0.85rem;
+  }
+
+  .sites-table th,
+  .regulation-table th,
+  .sites-table td,
+  .regulation-table td {
+    padding: 0.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .results-display {
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .results-header {
+    background: #333 !important;
+    color: white;
+  }
+
+  .tab {
+    display: none;
+  }
+
+  .export-section {
+    display: none;
+  }
+}
